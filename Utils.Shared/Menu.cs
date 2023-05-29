@@ -13,7 +13,7 @@
 
         public static void CalculatorMainMenu()
         {
-            Console.WriteLine("What do you want?");            
+            Console.WriteLine("What do you want?");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(
                     "\tPress 1: To make a simple calculation using operators\n"
@@ -21,7 +21,7 @@
                     + "\tPress 0: To exit"
             );
             Console.ResetColor();
-            
+
         }
 
 

@@ -7,7 +7,7 @@ namespace RPN_Calculator.BLL
         public static Stack<decimal> stackList = new Stack<decimal>();
         private static decimal result;
         public static void OperationsMenu()
-        {            
+        {
         MainMenu: Menu.CalculatorMainMenu();
         Start: Console.Write("Pick an Option: ");
             string option = Console.ReadLine();
@@ -77,7 +77,7 @@ namespace RPN_Calculator.BLL
                     {
                         PerformOperations(token);
                     }
-                }               
+                }
 
 
                 return stackList.Pop();
@@ -109,7 +109,7 @@ namespace RPN_Calculator.BLL
                 default:
                     Console.WriteLine("Invalid or incomplete operation. Kindly" +
                         " input a valid expression");
-                    break;
+                    return;
             }
 
         }
