@@ -27,8 +27,15 @@ namespace RPN_Calculator.BLL
                     Console.WriteLine($"Result: {result}");
                     break;
                 case "2":
-                    Console.Clear();
-                    Console.WriteLine("option 2");
+                    StartSqrtOperation: Console.WriteLine("Square root operation");
+                    Console.Write("==> Input: ");
+                    string number = Console.ReadLine();
+                    if (string.IsNullOrWhiteSpace(number) || !double.TryParse(number, out double num))
+                    {
+                        Utils.Shared.Utils.ErrorPrompts("Invalid inputs... Try again!");
+                        goto StartSqrtOperation;
+                    }
+                        PerformSquareRootOperation(number);
                     break;
                 case "0":
                     Console.Clear();
@@ -129,6 +136,16 @@ namespace RPN_Calculator.BLL
             return result;
         }
 
-
+        private static double PerformSquareRootOperation(string number)
+        {
+            if (!string.IsNullOrWhiteSpace(number) && double.TryParse(number, out double num))
+            {
+                double result = Math.Sqrt(num);
+                Console.WriteLine($"Square root of {number} is {result}");
+            }   
+            
+           
+            return (double)result;
+        }
     }
 }
