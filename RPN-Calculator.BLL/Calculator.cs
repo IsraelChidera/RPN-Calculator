@@ -6,6 +6,7 @@ namespace RPN_Calculator.BLL
     {
         public static Stack<decimal> stackList = new Stack<decimal>();
         private static decimal result;
+
         public static void OperationsMenu()
         {
         MainMenu: Menu.CalculatorMainMenu();
@@ -97,7 +98,7 @@ namespace RPN_Calculator.BLL
             }
         }
 
-        public static void PerformOperations(string token)
+        private static void PerformOperations(string token)
         {
 
             switch (token)
@@ -137,16 +138,16 @@ namespace RPN_Calculator.BLL
             return result;
         }
 
-        private static double PerformSquareRootOperation(string number)
+        public static double PerformSquareRootOperation(string number)
         {
+            double result = 0.0;
             if (!string.IsNullOrWhiteSpace(number) && double.TryParse(number, out double num))
             {
-                double result = Math.Sqrt(num);
+                result = Math.Sqrt(num);
                 Console.WriteLine($"Square root of {number} is {result}");
             }   
-            
-           
-            return (double)result;
+                       
+            return result;
         }
     }
 }
