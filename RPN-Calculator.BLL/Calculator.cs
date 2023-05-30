@@ -23,7 +23,8 @@ namespace RPN_Calculator.BLL
                 case "1":
                     Console.Write("Write expression: ");
                     string exp = Console.ReadLine();
-                    result = PerformOperation(exp);
+
+                    result = Calculate(exp);
                     Console.WriteLine($"Result: {result}");
                     break;
                 case "2":
@@ -66,7 +67,7 @@ namespace RPN_Calculator.BLL
 
         }
 
-        public static decimal PerformOperation(string exp)
+        public static decimal Calculate(string exp)
         {
             try
             {
