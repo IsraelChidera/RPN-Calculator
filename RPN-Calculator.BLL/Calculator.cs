@@ -44,11 +44,11 @@ namespace RPN_Calculator.BLL
                     Console.WriteLine("Exiting the application");
                     return;
                 default:
-                    Utils.Shared.Utils.ErrorPrompts("Invalid inputs");
+                    Utils.Shared.Utils.ErrorPrompts("Invalid inputs. Try again!");
                     goto Start;
             }
 
-            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nDo you want to perform another operation?\n***Press Y or y: to perform " +
                 "another operation.\n***Press any other key: to exit application");
             Console.ResetColor();
