@@ -26,7 +26,7 @@ After installing the .NET 5 SDK, you can clone the repository to your local mach
 To get started, follow these steps:
 
 1. Clone the repository to your local machine. 
-2. Open the solution file CeestoreWebAPI.sln in your preferred IDE or text editor.
+2. Open the solution file RPN-Calculator.sln in your preferred IDE or text editor.
 3. Run the application using your IDE
 
 ## How to use
